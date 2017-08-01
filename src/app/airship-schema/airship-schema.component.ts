@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { AirshipSchemaService } from './airship-schema.service';
 
 @Component({
   selector: 'app-airship-schema',
   templateUrl: './airship-schema.component.html',
-  styleUrls: ['./airship-schema.component.css']
+  providers: [AirshipSchemaService],
+  styleUrls: ['../app.component.css']
 })
 export class AirshipSchemaComponent implements OnInit {
+  body:any;
 
-  constructor() { }
+  constructor(private service: AirshipSchemaService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+    this.getSchema();
+  }
+
+  getSchema() {
+    this.service.getAirshipSchema()
+      .then(res => {
+        this.body = this.sanitizer.bypassSecurityTrustHtml(res.fields.filter((field) => {
+          return field.variable_name === 'body';
+        })[0].value);
+      })
+      .catch(err => {
+        throw err;
+      });
   }
 
 }
