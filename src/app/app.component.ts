@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,5 @@ import { Router, NavigationEnd } from '@angular/router';
 
 export class AppComponent {
 
-  active:string;
-
-  constructor(private router: Router){
-    this.active = this.router.routerState.snapshot.url;
-  }
+  constructor(){}
 }

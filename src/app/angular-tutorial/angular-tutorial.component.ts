@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularTutorialService } from './angular-tutorial.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-angular-tutorial',

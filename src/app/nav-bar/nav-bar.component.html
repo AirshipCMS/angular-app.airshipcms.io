@@ -1,0 +1,20 @@
+<nav class="nav">
+  <div class="container">
+    <a class="nav-title title is-tab" routerLink='/'>Angular 1.x + Airship CMS</a>
+    <div class="nav-right nav-menu" id="nav-menu" [ngClass]='{"is-active": menuOpen}'>
+      <a [ngClass]="{'is-active': active==='/'}" class="nav-item" routerLink='/'>Setup</a>
+      <a [ngClass]="{'is-active': active==='/styling'}" class="nav-item" routerLink='/styling'>Styling</a>
+      <a [ngClass]="{'is-active': active==='/airship-schema'}" class="nav-item" routerLink='/airship-schema'>Airship Schema</a>
+      <a [ngClass]="{'is-active': active==='/angular-tutorial'}" class="nav-item" routerLink='/angular-tutorial'>Angular Tutorial</a>
+      <a [ngClass]="{'is-active': active==='/elements'}" class="nav-item" routerLink='/elements'>Elements</a>
+    </div>
+    <a href="https://github.com/AirshipCMS/angular-1.airshipcms.io">
+      <img src="/assets/github-icon.svg">
+    </a>
+    <span class="nav-toggle" id="nav-toggle" (click)='toggleMenu()'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </div>
+</nav>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ElementsService } from './elements.service';
+import { NavBarComponent } from '../nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-elements',

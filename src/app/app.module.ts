@@ -12,6 +12,7 @@ import { AirshipSchemaComponent } from './airship-schema/airship-schema.componen
 import { AngularTutorialComponent } from './angular-tutorial/angular-tutorial.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ElementComponent } from './element/element.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ElementComponent } from './element/element.component';
     AirshipSchemaComponent,
     AngularTutorialComponent,
     ElementsComponent,
-    ElementComponent
+    ElementComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
