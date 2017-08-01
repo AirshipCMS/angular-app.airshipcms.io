@@ -1,15 +1,40 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { SetupService } from './setup.service';
 
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
-  styleUrls: ['./setup.component.css']
+  styleUrls: ['../app.component.css'],
+  providers: [SetupService]
 })
 export class SetupComponent implements OnInit {
 
-  constructor() { }
+  page:any = {};
+
+  constructor(private service: SetupService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
+    this.getPage();
+  }
+
+  getPage() {
+    this.service.getPage()
+      .then(res => {
+        res.fields.map((field) => {
+          switch(field.variable_name) {
+            case 'body':
+              this.page.body = this.sanitizer.bypassSecurityTrustHtml(field.value);
+              break;
+            default:
+              this.page[field.variable_name] = field.value;
+              break;
+          }
+        });
+      })
+      .catch(err => {
+        throw err;
+      });
   }
 
 }
