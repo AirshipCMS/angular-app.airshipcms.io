@@ -6,7 +6,6 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 @Component({
   selector: 'app-setup',
   templateUrl: './setup.component.html',
-  styleUrls: ['../app.component.css'],
   providers: [SetupService]
 })
 export class SetupComponent implements OnInit {

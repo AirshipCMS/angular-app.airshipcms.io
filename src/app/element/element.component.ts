@@ -6,7 +6,6 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 @Component({
   selector: 'app-element',
   templateUrl: './element.component.html',
-  styleUrls: ['../app.component.css'],
   providers: [ElementService]
 })
 export class ElementComponent implements OnInit {

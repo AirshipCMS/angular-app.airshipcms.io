@@ -6,8 +6,7 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 @Component({
   selector: 'app-airship-schema',
   templateUrl: './airship-schema.component.html',
-  providers: [AirshipSchemaService],
-  styleUrls: ['../app.component.css']
+  providers: [AirshipSchemaService]
 })
 export class AirshipSchemaComponent implements OnInit {
   body:any;

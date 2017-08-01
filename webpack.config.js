@@ -201,7 +201,7 @@ module.exports = {
       }
     }),
     new ProgressPlugin(),
-    new HtmlWebpackPlugin({  // Also generate a test.html
+    new HtmlWebpackPlugin({
       "filename": './index.html',
       "template": "./src/index.html",
     }),
