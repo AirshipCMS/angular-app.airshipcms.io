@@ -7,7 +7,7 @@ export class AirshipSchemaService {
 
   constructor(private http:Http) { }
 
-  getAirshipSchema() {
+  getPage() {
     return this.http.get('https://angular-app.airshipcms.io/api/pages/airship-schema')
       .toPromise()
       .then(res => res.json())

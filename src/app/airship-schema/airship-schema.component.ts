@@ -14,11 +14,11 @@ export class AirshipSchemaComponent implements OnInit {
   constructor(private service: AirshipSchemaService, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.getSchema();
+    this.getPage();
   }
 
-  getSchema() {
-    this.service.getAirshipSchema()
+  getPage() {
+    this.service.getPage()
       .then(res => {
         this.body = this.sanitizer.bypassSecurityTrustHtml(res.fields.filter((field) => {
           return field.variable_name === 'body';
