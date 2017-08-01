@@ -191,9 +191,7 @@ module.exports = {
   "plugins": [
     new NoEmitOnErrorsPlugin(),
     new GlobCopyWebpackPlugin({
-      "patterns": [
-        "assets"
-      ],
+      "patterns": [],
       "globOptions": {
         "cwd": "/Users/fobabett/GomaGames/angular-app.airshipcms.io/src",
         "dot": true,
