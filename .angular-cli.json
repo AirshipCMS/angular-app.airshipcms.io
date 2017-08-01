@@ -1,12 +1,13 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "angular-app.airshipcms.io"
+    "name": "angular-app.airshipcms.io",
+    "ejected": true
   },
   "apps": [
     {
       "root": "src",
-      "outDir": "compartments/assets",
+      "outDir": "compartments/assets/scripts",
       "assets": [
         "assets",
         "favicon.ico"
@@ -21,7 +22,8 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -52,6 +54,7 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+    }
   }
 }
