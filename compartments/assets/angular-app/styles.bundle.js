@@ -1,21 +1,78 @@
 webpackJsonp([2,4],{
 
-/***/ 162:
+/***/ 160:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(52)();
+exports = module.exports = __webpack_require__(161)();
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Open+Sans);", ""]);
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
+exports.push([module.i, "body, button, input, select, textarea {\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n}\n\n.body p {\n  margin-top: 0;\n}\n\n.has-text-centered {\n  font-style: italic;\n  margin-bottom: 20px;\n}\n\n@media screen and (min-width: 1000px){\n  .container{\n    margin-bottom: 60px;\n  }\n}\n\nspan.code {\n  background-color: #c3d2d6;\n  color: #313638;\n  font-family: \"Inconsolata\", \"Consolas\", \"Courier Neue\", \"Courier\", monospace;\n  padding: 2px 4px;\n  border-radius: 2px;\n}\n\n.content pre,\np.fake-code {\n  background-color: whitesmoke;\n  color: #313638;\n  font-family: \"Inconsolata\", \"Consolas\", \"Courier Neue\", \"Courier\", monospace;\n  border-radius: 2px;\n  padding: 1.25em 1.5em;\n  white-space: pre;\n  word-wrap: normal;\n  font-size: 14px;\n}\n\n.box {\n  background-color: #D7E3E6;\n  color: #67777B;\n  font-weight: bold;\n}\n\nnav {\n  margin: 20px;\n  padding: 0px;\n  border-bottom: 1px solid #E0E9EB;\n}\n\n.github {\n  position: absolute;\n  right: 50px;\n  top: 15px;\n}\n\n.nav-toggle {\n  height: 2rem;\n  position: absolute;\n  right: 0;\n  top: 15px;\n}\n\n.nav-title {\n  color: #C0002C;\n  display: inline-block;\n  font-size: 15px;\n  font-weight: bold;\n}\n\n.nav-title:hover {\n  color: #C0002C;\n}\n\n.body {\n  color: #8A9A9E;\n}\n.body h1,\n.body h2 {\n  color: #C0002C;\n}\n\n/*SETUP*/\n.container {\n  max-width: 960px;\n  letter-spacing: 0;\n  line-height: 20px;\n  padding: 20px;\n}\n\n.container p {\n  margin-top: 30px;\n}\n\n.summary {\n  text-align: center;\n  background: #C2002E;\n  color: #FFFFFF;\n  max-width: 960px;\n  border-radius: 5px;\n\n  /*desktop*/\n  padding: 20px;\n  font-size: 14px;\n  margin-bottom: 30px;\n}\n\n#airship-logo g,\n#airship-logo path {\n  fill: #FF8BA9;\n}\n\n.summary .title {\n  color: #FFFFFF;\n  margin: 20px;\n}\n\n.summary p {\n  line-height: 1.25;\n}\n\n/*ELEMENTS*/\n\n.image {\n  background-color: #C2002E;\n  padding: 50px;\n}\n\n.card p {\n  margin: 0;\n}\n\n/*ELEMENT*/\n\n.element-details,\n.element-detail-image {\n  display: inline-block;\n  vertical-align: top;\n}\n\n.element {\n  text-align: center;\n}\n\n.element-detail-image {\n  width: 100%;\n}\n\n.element-details {\n  padding: 20px;\n  color: #8A9A9E;\n}\n\n.element-details h4,\n.element-details h1 {\n  color: #8A9A9E;\n}\n\n@media only screen  and (min-width : 769px) {\n  .summary {\n    padding: 100px;\n    font-size: 20px;\n  }\n\n  nav {\n    border: none;\n  }\n\n  .element {\n    text-align: left;\n  }\n\n  .element-detail-image {\n    width: auto;\n  }\n\n  .nav-right {\n    height: 20px;\n    overflow: hidden;\n  }\n\n  .github {\n    position: relative;\n    top: 0;\n    right: 0;\n  }\n}\n\ncode{\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n}\ncode, code > *, code > * > * {\n    font-size: 0.8rem !important;\n}\npre code{\n    padding: 0;\n}\n\n/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript */\n/**\n * okaidia theme for JavaScript, CSS and HTML\n * Loosely based on Monokai textmate theme by http://www.monokai.nl/\n * @author ocodia\n */\n\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n  color: #f8f8f2;\n  background: none;\n  text-shadow: 0 1px rgba(0, 0, 0, 0.3);\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  text-align: left;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n\n  -webkit-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none;\n}\n\n/* Code blocks */\npre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n  overflow: auto;\n  border-radius: 0.3em;\n}\n\n:not(pre) > code[class*=\"language-\"],\npre[class*=\"language-\"] {\n  background: #272822;\n}\n\n/* Inline code */\n:not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em;\n  white-space: normal;\n}\n\n.token.comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n  color: slategray;\n}\n\n.token.punctuation {\n  color: #f8f8f2;\n}\n\n.namespace {\n  opacity: .7;\n}\n\n.token.property,\n.token.tag,\n.token.constant,\n.token.symbol,\n.token.deleted {\n  color: #f92672;\n  background-color:transparent;\n}\n\n.token.boolean,\n.token.number {\n  color: #ae81ff;\n}\n\n.token.selector,\n.token.attr-name,\n.token.string,\n.token.char,\n.token.builtin,\n.token.inserted {\n  color: #a6e22e;\n}\n\n.token.operator,\n.token.entity,\n.token.url,\n.language-css .token.string,\n.style .token.string,\n.token.variable {\n  color: #f8f8f2;\n}\n\n.token.atrule,\n.token.attr-value,\n.token.function {\n  color: #e6db74;\n}\n\n.token.keyword {\n  color: #66d9ef;\n}\n\n.token.regex,\n.token.important {\n  color: #fd971f;\n}\n\n.token.important,\n.token.bold {\n  font-weight: bold;\n}\n.token.italic {\n  font-style: italic;\n}\n\n.token.entity {\n  cursor: help;\n}\n/* You can add global styles to this file, and also import other style files */\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 200:
+/***/ 161:
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function() {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		var result = [];
+		for(var i = 0; i < this.length; i++) {
+			var item = this[i];
+			if(item[2]) {
+				result.push("@media " + item[2] + "{" + item[1] + "}");
+			} else {
+				result.push(item[1]);
+			}
+		}
+		return result.join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+
+/***/ }),
+
+/***/ 199:
 /***/ (function(module, exports) {
 
 /*
@@ -268,81 +325,24 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 204:
+/***/ 203:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(95);
+module.exports = __webpack_require__(93);
 
 
 /***/ }),
 
-/***/ 52:
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function() {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		var result = [];
-		for(var i = 0; i < this.length; i++) {
-			var item = this[i];
-			if(item[2]) {
-				result.push("@media " + item[2] + "{" + item[1] + "}");
-			} else {
-				result.push(item[1]);
-			}
-		}
-		return result.join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-
-/***/ }),
-
-/***/ 95:
+/***/ 93:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(162);
+var content = __webpack_require__(160);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(200)(content, {});
+var update = __webpack_require__(199)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -360,5 +360,5 @@ if(false) {
 
 /***/ })
 
-},[204]);
+},[203]);
 //# sourceMappingURL=styles.bundle.js.map
