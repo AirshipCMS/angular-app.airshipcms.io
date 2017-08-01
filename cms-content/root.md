@@ -1,5 +1,5 @@
 # Angular + Airship CMS
-<img src="https://cdn.rawgit.com/AirshipCMS/angular-app.airshipcms.io/development/assets/react-airship-blue.svg">
+<img src="https://cdn.rawgit.com/AirshipCMS/angular-app.airshipcms.io/a83fbabe/assets/angular-airship-red.svg">
 
 This is a demo of an Airship CMS project that uses an Angular to render all pages.
 You can view the demo at [http://angular-app.airshipcms.io](http://angular-app.airshipcms.io/).
