@@ -1,16 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'nav-bar',
-  templateUrl: './nav-bar.component.html'
+  selector: "nav-bar",
+  templateUrl: "./nav-bar.component.html"
 })
 export class NavBarComponent implements OnInit {
+  active: string;
+  menuOpen: boolean = false;
 
-  active:string;
-  menuOpen:boolean = false;
-
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     this.active = window.location.pathname;
@@ -19,5 +17,4 @@ export class NavBarComponent implements OnInit {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
-
 }

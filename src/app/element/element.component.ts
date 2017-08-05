@@ -1,35 +1,36 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ElementService } from './element.service';
-import { NavBarComponent } from '../nav-bar/nav-bar.component';
+import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { ElementService } from "./element.service";
+import { NavBarComponent } from "../nav-bar/nav-bar.component";
 
 @Component({
-  selector: 'app-element',
-  templateUrl: './element.component.html',
+  selector: "app-element",
+  templateUrl: "./element.component.html",
   providers: [ElementService]
 })
 export class ElementComponent implements OnInit {
+  elementID: string;
+  element: any;
 
-  elementID:string;
-  element:any;
-
-  constructor(private service:ElementService, private route:ActivatedRoute) { }
+  constructor(private service: ElementService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.elementID = params['id'];
+      this.elementID = params["id"];
     });
     this.getElement();
   }
 
   getElement() {
-    this.service.getAerostat(this.elementID)
+    this.service
+      .getAerostat(this.elementID)
       .then(res => {
         this.element = res;
-        this.element.fields.forEach((field) => {
+        this.element.fields.forEach(field => {
           this.element[field.variable_name] = field.value;
         });
-      }).catch(err => {
+      })
+      .catch(err => {
         throw err;
       });
   }
