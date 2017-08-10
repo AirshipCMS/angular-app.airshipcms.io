@@ -1,17 +1,17 @@
 <nav-bar></nav-bar>
 <div class='container'>
   <h2 class='has-text-centered'>This is a demo rendering all the items of the Elements collection with Angular</h2>
-  <div class='columns' *ngFor='let element of elements; let i = index' ng-if='i % 4 === 0'>
-    <a routerLink='/elements/{{ elements[j]?.id }}' class='column is-3 element' *ngFor='let j of [i, i + 1, i + 2, i + 3]'>
+  <div class='columns'>
+    <a *ngFor='let element of elements' routerLink='/elements/{{ element?.id }}' class='column is-3 element'>
       <div class='card'>
         <div class='card-image'>
           <figure class="image">
-            <img src="{{ elements[j]?.image[0].thumbnail_url }}" alt="{{ elements[j]?.image[0].file_name }}">
+            <img src="{{ element?.image[0].thumbnail_url }}" alt="{{ element?.image[0].file_name }}">
           </figure>
         </div>
         <div class='card-content'>
           <div class="media-content">
-            <p class="title is-4">{{ elements[j]?.name }}</p>
+            <p class="title is-4">{{ element?.name }}</p>
           </div>
         </div>
       </div>
