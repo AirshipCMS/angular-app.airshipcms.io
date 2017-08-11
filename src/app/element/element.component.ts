@@ -26,9 +26,9 @@ export class ElementComponent implements OnInit {
       .getAerostat(this.elementID)
       .then(res => {
         this.element = res;
-        this.element.fields.forEach(field => {
-          this.element[field.variable_name] = field.value;
-        });
+        this.element.fields.forEach(field =>
+          this.element[field.variable_name] = field.value
+        );
       })
       .catch(err => {
         throw err;

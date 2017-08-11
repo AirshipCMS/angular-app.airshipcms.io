@@ -21,10 +21,10 @@ export class ElementsComponent implements OnInit {
       .getCollection()
       .then(res => {
         this.elements = res.map(element => {
-          element.fields.forEach(field => {
-            element[field.variable_name] = field.value;
-          });
-          return element;
+          element.fields.forEach(field =>
+            element[field.variable_name] = field.value
+          );
+          return element
         });
       })
       .catch(err => {

@@ -54,12 +54,7 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_11__element_element_component__["a" /* ElementComponent */],
             __WEBPACK_IMPORTED_MODULE_12__nav_bar_nav_bar_component__["a" /* NavBarComponent */]
         ],
-        imports: [
-            __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_4__app_routes__["a" /* routing */]
-        ],
+        imports: [__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_4__app_routes__["a" /* routing */]],
         providers: [__WEBPACK_IMPORTED_MODULE_4__app_routes__["b" /* appRoutingProviders */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
@@ -90,12 +85,12 @@ AppModule = __decorate([
 
 
 var AppRoutes = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__setup_setup_component__["a" /* SetupComponent */] },
-    { path: 'styling', component: __WEBPACK_IMPORTED_MODULE_6__styling_styling_component__["a" /* StylingComponent */] },
-    { path: 'airship-schema', component: __WEBPACK_IMPORTED_MODULE_1__airship_schema_airship_schema_component__["a" /* AirshipSchemaComponent */] },
-    { path: 'angular-tutorial', component: __WEBPACK_IMPORTED_MODULE_2__angular_tutorial_angular_tutorial_component__["a" /* AngularTutorialComponent */] },
-    { path: 'elements', component: __WEBPACK_IMPORTED_MODULE_4__elements_elements_component__["a" /* ElementsComponent */] },
-    { path: 'elements/:id', component: __WEBPACK_IMPORTED_MODULE_3__element_element_component__["a" /* ElementComponent */] }
+    { path: "", component: __WEBPACK_IMPORTED_MODULE_5__setup_setup_component__["a" /* SetupComponent */] },
+    { path: "styling", component: __WEBPACK_IMPORTED_MODULE_6__styling_styling_component__["a" /* StylingComponent */] },
+    { path: "airship-schema", component: __WEBPACK_IMPORTED_MODULE_1__airship_schema_airship_schema_component__["a" /* AirshipSchemaComponent */] },
+    { path: "angular-tutorial", component: __WEBPACK_IMPORTED_MODULE_2__angular_tutorial_angular_tutorial_component__["a" /* AngularTutorialComponent */] },
+    { path: "elements", component: __WEBPACK_IMPORTED_MODULE_4__elements_elements_component__["a" /* ElementsComponent */] },
+    { path: "elements/:id", component: __WEBPACK_IMPORTED_MODULE_3__element_element_component__["a" /* ElementComponent */] }
 ];
 var appRoutingProviders = [];
 var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["a" /* RouterModule */].forRoot(AppRoutes);
@@ -219,7 +214,7 @@ var NavBarComponent = (function () {
 }());
 NavBarComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'nav-bar',
+        selector: "nav-bar",
         template: __webpack_require__(167)
     }),
     __metadata("design:paramtypes", [])
@@ -358,7 +353,7 @@ module.exports = "<nav-bar></nav-bar>\n<div class='container'>\n  <div class='el
 /***/ 166:
 /***/ (function(module, exports) {
 
-module.exports = "<nav-bar></nav-bar>\n<div class='container'>\n  <h2 class='has-text-centered'>This is a demo rendering all the items of the Elements collection with Angular</h2>\n  <div class='columns' *ngFor='let element of elements; let i = index' ng-if='i % 4 === 0'>\n    <a routerLink='/elements/{{ elements[j]?.id }}' class='column is-3 element' *ngFor='let j of [i, i + 1, i + 2, i + 3]'>\n      <div class='card'>\n        <div class='card-image'>\n          <figure class=\"image\">\n            <img src=\"{{ elements[j]?.image[0].thumbnail_url }}\" alt=\"{{ elements[j]?.image[0].file_name }}\">\n          </figure>\n        </div>\n        <div class='card-content'>\n          <div class=\"media-content\">\n            <p class=\"title is-4\">{{ elements[j]?.name }}</p>\n          </div>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n"
+module.exports = "<nav-bar></nav-bar>\n<div class='container'>\n  <h2 class='has-text-centered'>This is a demo rendering all the items of the Elements collection with Angular</h2>\n  <div class='columns'>\n    <a *ngFor='let element of elements' routerLink='/elements/{{ element?.id }}' class='column is-3 element'>\n      <div class='card'>\n        <div class='card-image'>\n          <figure class=\"image\">\n            <img src=\"{{ element?.image[0].thumbnail_url }}\" alt=\"{{ element?.image[0].file_name }}\">\n          </figure>\n        </div>\n        <div class='card-content'>\n          <div class=\"media-content\">\n            <p class=\"title is-4\">{{ element?.name }}</p>\n          </div>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -421,11 +416,12 @@ var AirshipSchemaComponent = (function () {
     };
     AirshipSchemaComponent.prototype.getPage = function () {
         var _this = this;
-        this.service.getPage()
+        this.service
+            .getPage()
             .then(function (res) {
-            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.filter(function (field) {
-                return field.variable_name === 'body';
-            })[0].value);
+            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.find(function (field) {
+                return field.variable_name === "body";
+            }).value);
         })
             .catch(function (err) {
             throw err;
@@ -435,7 +431,7 @@ var AirshipSchemaComponent = (function () {
 }());
 AirshipSchemaComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-airship-schema',
+        selector: "app-airship-schema",
         template: __webpack_require__(162),
         providers: [__WEBPACK_IMPORTED_MODULE_2__airship_schema_service__["a" /* AirshipSchemaService */]]
     }),
@@ -477,11 +473,12 @@ var AngularTutorialComponent = (function () {
     };
     AngularTutorialComponent.prototype.getPage = function () {
         var _this = this;
-        this.service.getPage()
+        this.service
+            .getPage()
             .then(function (res) {
-            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.filter(function (field) {
-                return field.variable_name === 'body';
-            })[0].value);
+            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.find(function (field) {
+                return field.variable_name === "body";
+            }).value);
             window.loadPrism();
         })
             .catch(function (err) {
@@ -492,7 +489,7 @@ var AngularTutorialComponent = (function () {
 }());
 AngularTutorialComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-angular-tutorial',
+        selector: "app-angular-tutorial",
         template: __webpack_require__(163),
         providers: [__WEBPACK_IMPORTED_MODULE_1__angular_tutorial_service__["a" /* AngularTutorialService */]]
     }),
@@ -532,19 +529,21 @@ var ElementComponent = (function () {
     ElementComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
-            _this.elementID = params['id'];
+            _this.elementID = params["id"];
         });
         this.getElement();
     };
     ElementComponent.prototype.getElement = function () {
         var _this = this;
-        this.service.getAerostat(this.elementID)
+        this.service
+            .getAerostat(this.elementID)
             .then(function (res) {
             _this.element = res;
             _this.element.fields.forEach(function (field) {
-                _this.element[field.variable_name] = field.value;
+                return _this.element[field.variable_name] = field.value;
             });
-        }).catch(function (err) {
+        })
+            .catch(function (err) {
             throw err;
         });
     };
@@ -552,7 +551,7 @@ var ElementComponent = (function () {
 }());
 ElementComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-element',
+        selector: "app-element",
         template: __webpack_require__(165),
         providers: [__WEBPACK_IMPORTED_MODULE_2__element_service__["a" /* ElementService */]]
     }),
@@ -591,15 +590,17 @@ var ElementsComponent = (function () {
     };
     ElementsComponent.prototype.getElements = function () {
         var _this = this;
-        this.service.getCollection()
+        this.service
+            .getCollection()
             .then(function (res) {
             _this.elements = res.map(function (element) {
                 element.fields.forEach(function (field) {
-                    element[field.variable_name] = field.value;
+                    return element[field.variable_name] = field.value;
                 });
                 return element;
             });
-        }).catch(function (err) {
+        })
+            .catch(function (err) {
             throw err;
         });
     };
@@ -607,7 +608,7 @@ var ElementsComponent = (function () {
 }());
 ElementsComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-elements',
+        selector: "app-elements",
         template: __webpack_require__(166),
         providers: [__WEBPACK_IMPORTED_MODULE_1__elements_service__["a" /* ElementsService */]]
     }),
@@ -650,11 +651,12 @@ var SetupComponent = (function () {
     };
     SetupComponent.prototype.getPage = function () {
         var _this = this;
-        this.service.getPage()
+        this.service
+            .getPage()
             .then(function (res) {
             res.fields.map(function (field) {
                 switch (field.variable_name) {
-                    case 'body':
+                    case "body":
                         _this.page.body = _this.sanitizer.bypassSecurityTrustHtml(field.value);
                         break;
                     default:
@@ -671,7 +673,7 @@ var SetupComponent = (function () {
 }());
 SetupComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-setup',
+        selector: "app-setup",
         template: __webpack_require__(168),
         providers: [__WEBPACK_IMPORTED_MODULE_2__setup_service__["a" /* SetupService */]]
     }),
@@ -713,11 +715,12 @@ var StylingComponent = (function () {
     };
     StylingComponent.prototype.getPage = function () {
         var _this = this;
-        this.service.getPage()
+        this.service
+            .getPage()
             .then(function (res) {
-            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.filter(function (field) {
-                return field.variable_name === 'body';
-            })[0].value);
+            _this.body = _this.sanitizer.bypassSecurityTrustHtml(res.fields.find(function (field) {
+                return field.variable_name === "body";
+            }).value);
             window.loadPrism();
         })
             .catch(function (err) {
@@ -728,7 +731,7 @@ var StylingComponent = (function () {
 }());
 StylingComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-styling',
+        selector: "app-styling",
         template: __webpack_require__(169),
         providers: [__WEBPACK_IMPORTED_MODULE_2__styling_service__["a" /* StylingService */]]
     }),
@@ -884,7 +887,7 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* Component */])({
-        selector: 'app-root',
+        selector: "app-root",
         template: __webpack_require__(164)
     }),
     __metadata("design:paramtypes", [])

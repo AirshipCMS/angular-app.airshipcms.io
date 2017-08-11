@@ -25,9 +25,9 @@ export class AirshipSchemaComponent implements OnInit {
       .getPage()
       .then(res => {
         this.body = this.sanitizer.bypassSecurityTrustHtml(
-          res.fields.filter(field => {
-            return field.variable_name === "body";
-          })[0].value
+          res.fields.find(field =>
+            field.variable_name === "body"
+          ).value
         );
       })
       .catch(err => {
