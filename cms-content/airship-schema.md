@@ -41,7 +41,7 @@ In the `Page Fields` section, add a textarea field titled "Body".
 Click `Create Page`.
 Repeat, for the "Angular Tutorial" and "Styling" pages.
 
-<img width="934.5" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/pages-all-angular-app.jpg">  
+<img width="934.5" alt="Pages" src="https://airshipcms.io/assets/media/oss-elements/all-pages-angular-app.jpg">  
 
 ## Create the `Elements` Collection
 - Navigate to `Collections` and click the `New Collection` button.
