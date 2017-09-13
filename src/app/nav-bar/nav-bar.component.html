@@ -11,7 +11,7 @@
     <a class="github-link" href="https://github.com/AirshipCMS/angular-app.airshipcms.io">
       <img src="/assets/media/github-icon.svg">
     </a>
-    <span class="nav-toggle" id="nav-toggle" (click)='toggleMenu()'>
+    <span class="nav-toggle" id="nav-toggle" (click)='toggleMenu()' [ngClass]='{"is-active": menuOpen}'>
       <span></span>
       <span></span>
       <span></span>

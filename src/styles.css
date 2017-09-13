@@ -55,30 +55,6 @@ nav {
   border-bottom: 1px solid #E0E9EB;
 }
 
-.github {
-  position: absolute;
-  right: 50px;
-  top: 15px;
-}
-
-.nav-toggle {
-  height: 2rem;
-  position: absolute;
-  right: 0;
-  top: 15px;
-}
-
-.nav-title {
-  color: #C0002C;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.nav-title:hover {
-  color: #C0002C;
-}
-
 .nav > .container{
   padding: 0;
 }
@@ -94,12 +70,14 @@ a.github-link{
   width: 22px;
   height: 22px;
   margin-left: 10px;
-  transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
 }
 
 @media screen and (min-width: 769px){
   a.github-link{
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     margin-left: 0;
   }
 }
@@ -116,6 +94,30 @@ h2 code,
 h3 code,
 h4 code {
   font-size: 0.8em !important;
+}
+
+.github {
+  position: absolute;
+  right: 50px;
+  /*top: 15px;*/
+}
+
+.nav-toggle {
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  /*top: 15px;*/
+}
+
+.nav-title {
+  color: #C0002C;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.nav-title:hover {
+  color: #C0002C;
 }
 
 .body {
@@ -166,9 +168,11 @@ h4 code {
 }
 
 /*ELEMENTS*/
-
 .columns {
-  flex-flow: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 .image {
@@ -368,4 +372,3 @@ pre[class*="language-"] {
 .token.entity {
   cursor: help;
 }
-/* You can add global styles to this file, and also import other style files */
